@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts goes here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+
+    <title>👩🏽‍💻 Tirza | pancakes projects</title>
+</head>
+
+<!-- CSS goes here -->
+
+<style>
+    a {
+        color: #BE9FE1;
+        font-size: 0.850rem;
+        text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+        text-decoration: underline;
+        transition: all 200ms ease-in-out;
+    }
+
+    body {
+        background-color: #c8c1d54f;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    button {
+        background-color: #BE9FE1;
+        border-radius: 25px;
+        border: 1px solid #C9B6E4;
+        box-shadow: 5px 5px 10px rgba(52, 51, 51, 0.3);
+        color: #fff;
+        display: block;
+        font-size: 0.850rem;
+        margin: 0 auto;
+        margin-top: 28px;
+        padding: 12px 20px;
+    }
+
+    button:focus,
+    button:hover {
+        background-color: #fff;
+        color: #BE9FE1;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+    }
+
+    #container {
+        max-width: 450px;
+        margin: 0 auto;
+        margin-top: 2vh;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid #C9B6E4;
+        padding: 8px;
+    }
+
+    .card__details {
+        padding: 16px 8px 8px 8px;
+    }
+
+    .content {
+        font-size: 0.850rem;
+        line-height: 150%;
+    }
+
+    .coder-name {
+        color: #BE9FE1;
+        display: inline;
+        font-weight: 600;
+        font-size: 0.75rem;
+    }
+
+    .footer {
+        font-size: 0.75rem;
+        text-align: center;
+        margin-top: 35px;
+    }
+
+    h1 {
+        color: #BE9FE1;
+        font-weight: 700;
+        font-size: 2.75rem;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        position: sticky;
+    }
+
+    h2 {
+        font-weight: 200;
+        font-size: 1.25rem;
+        line-height: 1;
+        text-align: center;
+    }
+
+    hr {
+        border: 6px dotted #adbcc8;
+        border-bottom: none;
+        width: 3%;
+    }
+
+    img {
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px rgba(52, 51, 51, 0.3);
+        display: block;
+        height: 300px;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    ul {
+        list-style: none;
+        font-size: 0.850rem;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        font-size: 0.850rem;
+    }
+</style>
+
+<!-- HTML goes here -->
+
+<body>
+    <div id="container">
+        <div class="card">
+            <h1>Pancake 🥞 </h1>
+
+            <h2>" Pancakes are <strong><em>always good</em></strong> "</h2>
+
+            <hr>
+
+            <img src="
+        https://s3.amazonaws.com/shecodesio-production/uploads/files/000/038/481/original/calum-lewis-8Nc_oQsc2qQ-unsplash.jpg?1656139381"
+                alt="pancake-image">
+
+            <span> <small>Picture by : Calum Lewis - Unsplash</small></span>
+
+            <div class="card__details">
+
+                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt
+                    ut labore et dolore.
+                </p>
+                <div class="list-items">
+                    <ul>
+                        <li><input type="checkbox"> ½ cup all-purpose flour </li>
+                        <li><input type="checkbox"> ½ cup quick cooking oats </li>
+                        <li><input type="checkbox"> 1 tablespoon white sugar </li>
+                        <li><input type="checkbox"> 1 teaspoon baking powder </li>
+                        <li><input type="checkbox"> ½ teaspoon baking soda </li>
+                    </ul>
+                </div>
+                <p> <a href="https://www.allrecipes.com/recipes/151/breakfast-and-brunch/pancakes/" target="_blank">Find
+                        out more about about the receipe 😊 </a></p>
+
+                <button>GET IN TOUCH</button>
+
+                <footer>
+                    <p class="footer">👩🏽‍💻 coded by <span class="coder-name">Tirza Samosir</span> 2022</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS goes here -->
+    <script>
+
+        function askUser() {
+            let firstName = prompt("Hi 👋🏽, What is your name ?");
+            firstName = firstName
+                .charAt(0)
+                .toUpperCase() +
+                firstName.slice(1).trim()
+            let emailAddress = prompt("What is your email address ?");
+            let updateHeading = document.querySelector("h2");
+            updateHeading.innerHTML = `Thank you ${firstName}, We'll be in touch 😉`;
+        }
+
+        let updatePancakes = document.querySelector("button");
+        updatePancakes.addEventListener("click", askUser);
+    </script>
+</body>
+
+</html>
